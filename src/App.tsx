@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import AppBar from './components/AppBar';
 import Drawer from './components/Drawer';
 import Home from './pages/Home';
@@ -29,7 +30,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-function App() {
+const App: React.FC = () => {
   const [openLeft, setOpenLeft] = React.useState(false);
   const [openRight, setOpenRight] = React.useState(true);
 
@@ -42,7 +43,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/cra-ts/">
       <GlobalStyle />
 
       <AppBar handleDrawer1={handleDrawer1} />
@@ -62,6 +63,6 @@ function App() {
       </Container>
     </Router>
   );
-}
+};
 
 export default App;
