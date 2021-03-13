@@ -6,7 +6,7 @@ import { H2 } from '../../components/Typography';
 const Home: React.FC = () => {
   return (
     <div>
-      <H2>Home</H2>
+      <H2>Simple Todo Example</H2>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Drawer from './components/Drawer';
 import Home from './pages/Home';
 import Users from './pages/Users';
 import About from './pages/About';
+import Todo from './pages/Todo';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,24 +15,29 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    
 
   }
+  body{
+    width:100%;
+  }
   body, input, button {
-    font: 14px Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+  }
+  a:visited {
+    color:inherit;
   }
 `;
 
 export const Container = styled.div`
-  position: absolute;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
 `;
 
 const App: React.FC = () => {
-  const [openLeft, setOpenLeft] = React.useState(false);
+  const [openLeft, setOpenLeft] = React.useState(true);
   const [openRight, setOpenRight] = React.useState(true);
 
   function handleDrawer1() {
@@ -45,7 +51,6 @@ const App: React.FC = () => {
   return (
     <Router basename="/cra-ts/">
       <GlobalStyle />
-
       <AppBar handleDrawer1={handleDrawer1} />
       {openLeft && <Drawer handleDrawer1={handleDrawer1} isOpen={openLeft} />}
       <Container>
@@ -57,6 +62,9 @@ const App: React.FC = () => {
             <Users />
           </Route>
           <Route path="/">
+            <Todo />
+          </Route>
+          <Route path="/home">
             <Home />
           </Route>
         </Switch>

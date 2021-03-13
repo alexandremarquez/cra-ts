@@ -4,19 +4,38 @@ export const Button = styled.button`
   background-color: #008cba; /* Green */
   border: none;
   color: white;
-  padding: 5px 10px;
-  text-align: center;
+  padding: 2px 6px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
 
   &:hover {
     background-color: #116cbf; /* Green */
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+`;
+
+export const MenuBtn = styled.button`
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #008cba; /* Green */
+    color: white;
+  }
+`;
+export const IconBtn = styled.button`
+  color: black;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    color: #008cba;
   }
 `;

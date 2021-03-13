@@ -6,16 +6,11 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 55px;
-  background: #94b8b8;
+  height: 60px;
+  background: #f2f2f2;
   z-index: 100;
   position: fixed;
   padding-left: 10px;
   padding-right: 10px;
-
-  span {
-    position: relative;
-    align-self: center;
-  }
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `;

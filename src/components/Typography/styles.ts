@@ -5,13 +5,20 @@ export const Box = styled.div`
 `;
 
 export const H1 = styled.h1`
-  font-size: 18px;
-  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const H2 = styled.h2`
+  font-weight: bold;
+  line-height: 2em;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+`;
+
+export const TitleBar = styled.h1`
+  margin: 5px;
+  font-weight: bold;
   font-size: 16px;
-  padding-left: 10px;
-  margin: 10px;
-  color: gray;
 `;

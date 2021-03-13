@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MenuBtn } from '../Button';
 import { H1, H2 } from '../Typography';
 import { Container, Menu, StyledLink } from './styles';
 
@@ -14,18 +15,19 @@ const Drawer: React.FC<DrawerProps> = ({
 }: DrawerProps) => {
   return (
     <Container>
-      <H1>Pages</H1>
+      <H2>Pages</H2>
       <StyledLink onClick={handleDrawer1} to="/">
-        <H2>Home</H2>
+        Home
+      </StyledLink>
+      <StyledLink onClick={handleDrawer1} to="/todo">
+        Todo
       </StyledLink>
       <StyledLink onClick={handleDrawer1} to="/users">
-        <H2>Users</H2>
+        Users
       </StyledLink>
       <StyledLink onClick={handleDrawer1} to="/about">
-        <H2>About</H2>
+        About
       </StyledLink>
-      <H1>Components</H1>
-      <H2>Sign In</H2>
     </Container>
   );
 };

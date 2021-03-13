@@ -5,16 +5,18 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%; /* 100% Full-height */
-  width: 180px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
   left: 0;
-  background-color: #f0f5f5; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  padding-top: 70px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 10px;
 `;
 
 export const Menu = styled.div`
@@ -28,4 +30,12 @@ export const Menu = styled.div`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5em;
+
+  &:hover {
+    color: darkblue;
+  }
 `;
